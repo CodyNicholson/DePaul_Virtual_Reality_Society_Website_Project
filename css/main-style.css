@@ -1,37 +1,71 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
 .navBar
 {
     width: 100%;
     padding-top: 0.3vh;
     padding-bottom: 0.4vh;
-}
-
-nav
-{
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
 }
 
-.navItem
+nav
+{
+    width: 80%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+.logo
 {
     height: 50px;
     width: 20%;
-    background-color: blue;
+    background-color: white;
+    line-height: 50px;
+    margin-top: 1.5px;
+    padding-top: 3px;
+    min-height: 50px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+.navItem
+{
+    height: 50px;
+    width: 33%;
     background-color: black;
     color: white;
     font-weight: bold;
     font-size: 1.5em;
     line-height: 50px;
     margin-top: 1.5px;
-    padding-top: 3px;
     text-align: center;
     min-height: 50px;
     vertical-align: middle;
+    padding-top: 3px;
     padding-bottom: 5px;
+    margin-right: 0.15%;
+    margin-left: 0.15%;
+    float: right;
 }
 
 .navItem:hover
 {
     color: black;
     background-color: white;
+}
+
+.foot
+{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
