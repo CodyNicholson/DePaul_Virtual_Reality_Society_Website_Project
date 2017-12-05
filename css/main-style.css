@@ -1,0 +1,37 @@
+.navBar
+{
+    width: 100%;
+    padding-top: 0.3vh;
+    padding-bottom: 0.4vh;
+}
+
+nav
+{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+.navItem
+{
+    height: 50px;
+    width: 20%;
+    background-color: blue;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 50px;
+    margin-top: 1.5px;
+    padding-top: 3px;
+    text-align: center;
+    min-height: 50px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+.navItem:hover
+{
+    color: black;
+    background-color: white;
+}
