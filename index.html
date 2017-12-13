@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DePaul VR Society</title>
-    <link rel="stylesheet" type="text/css" href="css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.min.js"></script>
 </head>
 <body>
-    <div class="navBar">
-        <img src="imgs/logo.jpg" class="logo">
-        <nav>
-            <div class="navItem" href="">Home</div>
-            <div class="navItem" href="">Projects</div>
-            <div class="navItem" href="">Contact</div>
-        </nav>
-    </div>
-    <iframe src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/" width="100%" height="500px"></iframe>
-    <div class="foot">
-        Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications director)<br/><br/>
-        Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
-    </div>
+    <div id="container"></div>
+    <script type="text/babel">
+        var NavBarComponent = React.createClass({
+            render: function () {
+                return (
+                    <div id="navBar">
+                        <img src="imgs/logo.jpg"  className="logo"></img>
+                        <nav>
+                            <div onClick={this.clickHome} className="navItem">Home</div>
+                            <div onClick={this.clickProjects} className="navItem">Projects</div>
+                            <div onClick={this.clickCalendar} className="navItem">Calendar</div>
+                        </nav>
+                    </div>
+                );
+            }
+        });
+        var PageBodyComponent = React.createClass({
+            getInitialState: function () {
+                return {bodyState: "Home"}
+            },
+            render: function () {
+                if (this.state.bodyState === "Home")
+                {
+                    return (
+                        <div className="pageBodyContainer">
+                            <iframe src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/" width="99.5%" height="500px"></iframe>
+                        </div>);
+                }
+                else if (this.state.bodyState === "Projects")
+                {
+                    return (
+                        <div className="pageBodyContainer">
+                            <p>These are our projects:</p>
+                        </div>
+                    );
+                }
+                else if (this.state.bodyState === "Calendar")
+                {
+                    return (
+                        <div className="pageBodyContainer">
+                            <p>These are our upcoming events:</p>
+                        </div>
+                    );
+                }
+                else {
+                    return (
+                        <div className="pageBodyContainer">
+                            <p>You have found a state that does not exist. Congratulations.</p>
+                        </div>
+                    );
+                }
+            }
+        });
+        var FooterComponent = React.createClass({
+            render: function () {
+                return (
+                    <div className="footer">
+                        Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                    </div>
+                );
+            }
+        });
+        var MasterComponent = React.createClass({
+            getInitialState: function () {
+                return {bodyState: "Home"}
+            },
+            clickHome: function () {
+                this.setState({bodyState: "Home"});
+                this.refs.pageBody.setState("Home");
+            },
+            clickProjects: function () {
+                this.setState({bodyState: "Projects"});
+                this.refs.pageBody.setState("Projects");
+            },
+            clickCalendar: function () {
+                this.setState({bodyState: "Calendar"});
+                this.refs.pageBody.setState("Projects");
+            },
+            render: function () {
+                return (
+                    <div>
+                        <NavBarComponent ref="nav" />
+                        <PageBodyComponent ref="pageBody" />
+                        <FooterComponent />
+                    </div>
+                );
+            }
+        });
+        ReactDOM.render(
+            <div id='outsideParentDiv'>
+                <MasterComponent />
+            </div>,
+            document.getElementById('container')
+        );
+    </script>
 </body>

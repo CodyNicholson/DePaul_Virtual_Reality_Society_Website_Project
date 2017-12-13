@@ -4,7 +4,7 @@ html, body
     padding: 0;
 }
 
-.navBar
+div#navBar
 {
     width: 100%;
     padding-top: 0.3vh;
@@ -59,9 +59,15 @@ nav
 {
     color: black;
     background-color: white;
+    cursor: pointer;
 }
 
-.foot
+.pageBodyContainer
+{
+    height: 500px;
+}
+
+.footer
 {
     text-align: center;
     background-color: black;
