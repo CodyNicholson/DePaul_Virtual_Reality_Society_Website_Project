@@ -12,69 +12,11 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
-        var NavBarComponent = React.createClass({
-            render: function () {
-                return (
-                    <div id="navBar">
-                        <img src="imgs/logo.jpg"  className="logo"></img>
-                        <nav>
-                            <div onClick={this.clickHome} className="navItem">Home</div>
-                            <div onClick={this.clickProjects} className="navItem">Projects</div>
-                            <div onClick={this.clickCalendar} className="navItem">Calendar</div>
-                        </nav>
-                    </div>
-                );
-            }
-        });
-        var PageBodyComponent = React.createClass({
-            getInitialState: function () {
-                return {bodyState: "Home"}
-            },
-            render: function () {
-                if (this.state.bodyState === "Home")
-                {
-                    return (
-                        <div className="pageBodyContainer">
-                            <iframe src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/" width="99.5%" height="500px"></iframe>
-                        </div>);
-                }
-                else if (this.state.bodyState === "Projects")
-                {
-                    return (
-                        <div className="pageBodyContainer">
-                            <p>These are our projects:</p>
-                        </div>
-                    );
-                }
-                else if (this.state.bodyState === "Calendar")
-                {
-                    return (
-                        <div className="pageBodyContainer">
-                            <p>These are our upcoming events:</p>
-                        </div>
-                    );
-                }
-                else {
-                    return (
-                        <div className="pageBodyContainer">
-                            <p>You have found a state that does not exist. Congratulations.</p>
-                        </div>
-                    );
-                }
-            }
-        });
-        var FooterComponent = React.createClass({
-            render: function () {
-                return (
-                    <div className="footer">
-                        Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
-                    </div>
-                );
-            }
-        });
-        var MasterComponent = React.createClass({
-            getInitialState: function () {
-                return {bodyState: "Home"}
+        var MasterComponent = React.createClass
+        ({
+            getInitialState: function ()
+            {
+                return { bodyState: "Home" }
             },
             clickHome: function () {
                 this.setState({bodyState: "Home"});
@@ -88,21 +30,98 @@
                 this.setState({bodyState: "Calendar"});
                 this.refs.pageBody.setState("Projects");
             },
-            render: function () {
-                return (
-                    <div>
-                        <NavBarComponent ref="nav" />
-                        <PageBodyComponent ref="pageBody" />
-                        <FooterComponent />
-                    </div>
-                );
+            render: function ()
+            {
+                if (this.state.bodyState === "Home")
+                {
+                    return
+                    (
+                        <div>
+                            <div id="navBar">
+                                <img src="imgs/logo.jpg"  className="logo"></img>
+                                <nav>
+                                    <div onClick={this.clickHome} className="navItem">Home</div>
+                                    <div onClick={this.clickProjects} className="navItem">Projects</div>
+                                    <div onClick={this.clickCalendar} className="navItem">Calendar</div>
+                                </nav>
+                            </div>
+                            <div className="pageBodyContainer">
+                                <iframe src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/" width="99.5%" height="500px"></iframe>
+                            </div>
+                            <div className="footer">
+                                Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                            </div>
+                        </div>
+                    );
+                }
+                else if (this.state.bodyState === "Projects")
+                {
+                    return
+                    (
+                        <div>
+                            <div id="navBar">
+                                <img src="imgs/logo.jpg"  className="logo"></img>
+                                <nav>
+                                    <div onClick={this.clickHome} className="navItem">Home</div>
+                                    <div onClick={this.clickProjects} className="navItem">Projects</div>
+                                    <div onClick={this.clickCalendar} className="navItem">Calendar</div>
+                                </nav>
+                            </div>
+                            <div className="pageBodyContainer">
+                                <p>These are our projects:</p>
+                            </div>
+                            <div className="footer">
+                                Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                            </div>
+                        </div>
+                    );
+                }
+                else if (this.state.bodyState === "Calendar")
+                {
+                    return
+                    (
+                        <div>
+                            <div id="navBar">
+                                <img src="imgs/logo.jpg"  className="logo"></img>
+                                <nav>
+                                    <div onClick={this.clickHome} className="navItem">Home</div>
+                                    <div onClick={this.clickProjects} className="navItem">Projects</div>
+                                    <div onClick={this.clickCalendar} className="navItem">Calendar</div>
+                                </nav>
+                            </div>
+                            <div className="pageBodyContainer">
+                                <p>These are our upcoming events:</p>
+                            </div>
+                            <div className="footer">
+                                Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                            </div>
+                        </div>
+                    );
+                }
+                else
+                {
+                    return
+                    (
+                        <div>
+                            <div id="navBar">
+                                <img src="imgs/logo.jpg"  className="logo"></img>
+                                <nav>
+                                    <div onClick={this.clickHome} className="navItem">Home</div>
+                                    <div onClick={this.clickProjects} className="navItem">Projects</div>
+                                    <div onClick={this.clickCalendar} className="navItem">Calendar</div>
+                                </nav>
+                            </div>
+                            <div className="pageBodyContainer">
+                                <p>You have found a state that does not exist. Congratulations.</p>
+                            </div>
+                            <div className="footer">
+                                Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                            </div>
+                        </div>
+                    );
+                }
             }
         });
-        ReactDOM.render(
-            <div id='outsideParentDiv'>
-                <MasterComponent />
-            </div>,
-            document.getElementById('container')
-        );
+        ReactDOM.render(<MasterComponent />, document.getElementById('container'));
     </script>
 </body>
