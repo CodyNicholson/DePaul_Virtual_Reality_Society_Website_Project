@@ -12,31 +12,25 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
-        var MasterComponent = React.createClass
-        ({
+        var MasterComponent = React.createClass({
             getInitialState: function ()
             {
                 return { bodyState: "Home" }
             },
             clickHome: function () {
                 this.setState({bodyState: "Home"});
-                this.refs.pageBody.setState("Home");
             },
             clickProjects: function () {
                 this.setState({bodyState: "Projects"});
-                this.refs.pageBody.setState("Projects");
             },
             clickCalendar: function () {
                 this.setState({bodyState: "Calendar"});
-                this.refs.pageBody.setState("Projects");
             },
-            render: function ()
-            {
+            render: function () {
                 if (this.state.bodyState === "Home")
                 {
-                    return
-                    (
-                        <div>
+                    return (
+                        <div id='insideParentDiv'>
                             <div id="navBar">
                                 <img src="imgs/logo.jpg"  className="logo"></img>
                                 <nav>
@@ -56,9 +50,8 @@
                 }
                 else if (this.state.bodyState === "Projects")
                 {
-                    return
-                    (
-                        <div>
+                    return (
+                        <div id='insideParentDiv'>
                             <div id="navBar">
                                 <img src="imgs/logo.jpg"  className="logo"></img>
                                 <nav>
@@ -68,7 +61,7 @@
                                 </nav>
                             </div>
                             <div className="pageBodyContainer">
-                                <p>These are our projects:</p>
+                                Here you can see our projects:
                             </div>
                             <div className="footer">
                                 Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
@@ -78,9 +71,8 @@
                 }
                 else if (this.state.bodyState === "Calendar")
                 {
-                    return
-                    (
-                        <div>
+                    return (
+                        <div id='insideParentDiv'>
                             <div id="navBar">
                                 <img src="imgs/logo.jpg"  className="logo"></img>
                                 <nav>
@@ -90,7 +82,7 @@
                                 </nav>
                             </div>
                             <div className="pageBodyContainer">
-                                <p>These are our upcoming events:</p>
+                                Here you can see our upcoming events:
                             </div>
                             <div className="footer">
                                 Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
@@ -100,9 +92,8 @@
                 }
                 else
                 {
-                    return
-                    (
-                        <div>
+                    return (
+                        <div id='insideParentDiv'>
                             <div id="navBar">
                                 <img src="imgs/logo.jpg"  className="logo"></img>
                                 <nav>
@@ -112,7 +103,7 @@
                                 </nav>
                             </div>
                             <div className="pageBodyContainer">
-                                <p>You have found a state that does not exist. Congratulations.</p>
+                                Congratulations. You have found a non-existing state.
                             </div>
                             <div className="footer">
                                 Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
