@@ -31,10 +31,16 @@
             renderNormal: function () {
                 return (
                     <div className='commentContainer'>
-                        <h2 className="titleText">{ this.props.children.split(';')[0] }</h2>
-                        <div className="commentText">{ this.props.children.split(';')[1] }</div>
-                        <button onClick={this.edit} className="button-primary">Edit</button>
-                        <button onClick={this.remove} className="button-danger">Remove</button>
+                        <div className="projFlexList">
+                            <img className="projImg" src={ this.props.children.split(';')[3] } />
+                            <div>
+                                <h2 className="projectTitle">{ this.props.children.split(';')[0] }</h2>
+                                <div className="projectDescription">{ this.props.children.split(';')[1] }</div>
+                                <div className="projectCollaborators">{ "Collaborators:" + this.props.children.split(';')[2] }</div>
+                                <button onClick={this.edit} className="button-primary">Edit</button>
+                                <button onClick={this.remove} className="button-danger">Remove</button>
+                            </div>
+                        </div>
                     </div>
                 );
             },
@@ -90,7 +96,7 @@
             render: function () {
                 return (
                     <div>
-                        <button onClick={this.add.bind(null, "Default Project Title;\nDefault Project Description")} className="button-create">Add New Project</button>
+                        <button onClick={this.add.bind(null, "Default Project Title;\nDefault Project Description;\nDefault Collaborators;\nhttps://www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png;")} className="button-create">Add New Project</button>
                         <div className="board">
                             {this.state.comments.map(this.eachComment)}
                         </div>
@@ -117,8 +123,9 @@
             renderNormal: function () {
                 return (
                     <div className='commentContainer'>
-                        <h2 className="titleText">{ this.props.children.split(';')[0] }</h2>
-                        <div className="commentText">{ this.props.children.split(';')[1] }</div>
+                        <h2 className="eventTitle">{ this.props.children.split(';')[0] }</h2>
+                        <div className="eventData">{ this.props.children.split(';')[1] }</div>
+                        <div className="eventDescription">{ this.props.children.split(';')[2] }</div>
                         <button onClick={this.edit} className="button-primary">Edit</button>
                         <button onClick={this.remove} className="button-danger">Remove</button>
                     </div>
@@ -176,7 +183,7 @@
             render: function () {
                 return (
                     <div>
-                        <button onClick={this.add.bind(null, "Default Event Title;\nDefault Event Description")} className="button-create">Add New Event</button>
+                        <button onClick={this.add.bind(null, "Default Event Title;\nDefault Date;\nDefault Event Description;")} className="button-create">Add New Event</button>
                         <div className="board">
                             {this.state.comments.map(this.eachComment)}
                         </div>
