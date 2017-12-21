@@ -140,14 +140,15 @@ nav
 .editProject
 {
     margin-top: 2%;
-    height: 60px;
-    width: 230px;
+    height:100px;
+    width: 375px;
 }
 
 .commentContainer
 {
     background-color: ghostwhite;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;

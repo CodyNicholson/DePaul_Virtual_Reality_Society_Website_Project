@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DePaul VR Society</title>
-    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/react.min.js"></script>
-    <script src="js/react-dom.min.js"></script>
-    <script src="js/browser.min.js"></script>
-</head>
-<body>
-    <div id="container"></div>
-    <script type="text/babel">
+import React, { Component } from 'react';
+import fire from './fire';
+
         var ProjectComponent = React.createClass({
             getInitialState: function () {
                 return {editing: false}
@@ -202,7 +190,7 @@
             }
         });
 
-        var MasterComponent = React.createClass({
+        var App = React.createClass({
             getInitialState: function ()
             {
                 return { bodyState: "Home" }
@@ -309,6 +297,4 @@
             }
         });
 
-        ReactDOM.render(<MasterComponent />, document.getElementById('container'));
-    </script>
-</body>
+export default App;
