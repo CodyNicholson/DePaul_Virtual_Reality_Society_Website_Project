@@ -55,7 +55,7 @@ class CalendarComponent extends Component {
             <div className='commentContainer'>
                 <div className="projFlexList">
                     <img className="projImg" alt="Example" src={ this.props.children.split(';')[3] } />
-                    <div>
+                    <div className="textContent">
                         <h2 className="eventTitle">{ this.props.children.split(';')[0] }</h2>
                         <div className="eventData">{ this.props.children.split(';')[1] }</div>
                         <div className="eventDescription">{ this.props.children.split(';')[2] }</div>
@@ -140,7 +140,7 @@ class ProjectComponent extends Component {
             <div className='commentContainer'>
                 <div className="projFlexList">
                     <img className="projImg" alt="Example" src={ this.props.children.split(';')[3] } />
-                    <div>
+                    <div className="textContent">
                         <h2 className="projectTitle">{ this.props.children.split(';')[0] }</h2>
                         <div className="projectDescription">{ this.props.children.split(';')[1] }</div>
                         <div className="projectCollaborators">{ "Collaborators:" + this.props.children.split(';')[2] }</div>
