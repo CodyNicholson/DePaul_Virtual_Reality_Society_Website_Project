@@ -4,9 +4,15 @@ html, body
     padding: 0;
 }
 
+iframe {
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    border: none;
+}
+
 div#navBar
 {
-    width: 100%;
     padding-top: 0.3vh;
     padding-bottom: 0.4vh;
     display: flex;
@@ -14,7 +20,7 @@ div#navBar
     flex-wrap: wrap;
 }
 
-nav
+nav#topNav
 {
     width: 80%;
     display: flex;
@@ -22,22 +28,48 @@ nav
     flex-wrap: wrap;
 }
 
+nav#bottomNav
+{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
 .logo
 {
-    height: 50px;
-    width: 20%;
-    background-color: white;
-    line-height: 50px;
-    margin-top: 1.5px;
-    padding-top: 3px;
+    max-height: 55px;
     min-height: 50px;
+    height: 10%;
+    width: 20%;
+    display: block;
+    background-color: white;
     vertical-align: middle;
-    padding-bottom: 5px;
 }
 
 .navItem
 {
-    height: 50px;
+    height: 10%;
+    width: 33%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 50px;
+    margin-top: 1.5px;
+    text-align: center;
+    min-height: 50px;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-right: 0.15%;
+    margin-left: 0.15%;
+    float: right;
+}
+
+.navItem3
+{
+    height: 10%;
     width: 33%;
     background-color: black;
     color: white;
@@ -56,6 +88,13 @@ nav
 }
 
 .navItem:hover
+{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navItem3:hover
 {
     color: black;
     background-color: white;
@@ -134,7 +173,6 @@ nav
 .pageBodyContainer
 {
     background-color: lightskyblue;
-    height: 500px;
 }
 
 .editProject
@@ -170,10 +208,12 @@ nav
 
 .scrollDiv
 {
-    height: 500px;
+    height: 85%;
     overflow-y: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 10%;
+    position: absolute;
+    padding-right: 10%;
+    background: lightskyblue;
 }
 
 .projImg
@@ -201,9 +241,12 @@ nav
 
 .footer
 {
+    width: 100%;
+    bottom: 0;
     text-align: center;
-    background-color: black;
+    background-color: white;
     color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    position: fixed;
+    padding-top: 0.3vh;
+    padding-bottom: 0.4vh;
 }

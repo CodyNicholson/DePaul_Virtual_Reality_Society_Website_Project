@@ -222,7 +222,7 @@ class App extends Component {
     {
         return (
             <div className="pageBodyContainer">
-                <iframe title="VR Gallery" src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/" width="99.5%" height="495px"></iframe>
+                <iframe title="VR Gallery" src="https://codynicholson.github.io/Virtual_Reality_Image_Component_Project/"></iframe>
             </div>
         );
     }
@@ -250,7 +250,7 @@ class App extends Component {
             <div>
                 <div id="navBar">
                     <img alt="DePaul VR" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14572368_1541399855886376_5791530445074361234_n.jpg?oh=d5089ac690a9415c4dd6497bfd9a57d9&oe=5AB84A57"  className="logo"></img>
-                    <nav>
+                    <nav id="topNav">
                         <div onClick={this.clickHome} className="navItem">Home</div>
                         <div onClick={this.clickProjects} className="navItem">Projects</div>
                         <div onClick={this.clickEvents} className="navItem">Events</div>
@@ -258,7 +258,11 @@ class App extends Component {
                 </div>
                 {this.renderBody()}
                 <div className="footer">
-                    Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                    <nav id="bottomNav">
+                        <div onClick={this.clickHome} className="navItem">Updates</div>
+                        <div onClick={this.clickProjects} className="navItem3">Sponsors</div>
+                        <div onClick={this.clickEvents} className="navItem">Contact</div>
+                    </nav>
                 </div>
             </div>
         );
@@ -266,3 +270,9 @@ class App extends Component {
 }
 
 export default App;
+
+/*
+<div className="footer">
+                    Joseph Walker (President) - call or text at 443-248-4492<br/>Victor Shollenberger (Vice President)<br/>Kevin Sobolewski (Treasurer)<br/>Sarah Herchenbach (Communications Director)<br/><br/>Meetings are on Tuesday's from 6-8 in CDM 634 (subject to change)
+                </div>
+*/
