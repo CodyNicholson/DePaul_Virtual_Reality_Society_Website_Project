@@ -170,6 +170,22 @@ nav#bottomNav
     color: black;
 }
 
+.button-create2
+{
+    background-color: navy;
+    text-decoration: none;
+    border: none;
+    color: #FFF;
+    font: 13px/1.4 Roboto,sans-serif;
+    padding: 8px 12px;
+}
+
+.button-create2:hover
+{
+    background-color: white;
+    color: black;
+}
+
 .pageBodyContainer
 {
     background-color: lightskyblue;
@@ -201,7 +217,7 @@ nav#bottomNav
     padding-left: 30px;
 }
 
-.projectCollaborators
+.collaborators
 {
     padding-top: 10px;
 }
@@ -209,6 +225,7 @@ nav#bottomNav
 .scrollDiv
 {
     height: 85%;
+    width: 80%;
     overflow-y: auto;
     padding-left: 10%;
     position: absolute;
@@ -216,25 +233,27 @@ nav#bottomNav
     background: lightskyblue;
 }
 
-.projImg
-{
-    height: 150px;
-    width: 150px;
-    margin-top: 20px;
-    margin-right: 30px;
-}
-
 .projFlexList
 {
     display: flex;
 }
 
-.eventTitle
+.entryImg
+{
+    height: 150px;
+    width: 150px;
+    min-height: 150px;
+    min-width: 150px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.title
 {
     padding-top: 20px;
 }
 
-.eventDescription
+.description
 {
     padding-top: 10px;
 }
@@ -249,4 +268,15 @@ nav#bottomNav
     position: fixed;
     padding-top: 0.3vh;
     padding-bottom: 0.4vh;
+}
+
+.contact
+{
+    background-color: ghostwhite;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
