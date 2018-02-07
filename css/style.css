@@ -4,15 +4,9 @@ html, body
     padding: 0;
 }
 
-iframe {
-    position: absolute;
-    height: 85%;
-    width: 100%;
-    border: none;
-}
-
 div#navBar
 {
+    width: 100%;
     padding-top: 0.3vh;
     padding-bottom: 0.4vh;
     display: flex;
@@ -20,7 +14,7 @@ div#navBar
     flex-wrap: wrap;
 }
 
-nav#topNav
+nav
 {
     width: 80%;
     display: flex;
@@ -28,48 +22,22 @@ nav#topNav
     flex-wrap: wrap;
 }
 
-nav#bottomNav
-{
-    width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-}
-
 .logo
 {
-    max-height: 55px;
-    min-height: 50px;
-    height: 10%;
+    height: 50px;
     width: 20%;
-    display: block;
     background-color: white;
+    line-height: 50px;
+    margin-top: 1.5px;
+    padding-top: 3px;
+    min-height: 50px;
     vertical-align: middle;
+    padding-bottom: 5px;
 }
 
 .navItem
 {
-    height: 10%;
-    width: 33%;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-    line-height: 50px;
-    margin-top: 1.5px;
-    text-align: center;
-    min-height: 50px;
-    vertical-align: middle;
-    padding-top: 3px;
-    padding-bottom: 5px;
-    margin-right: 0.15%;
-    margin-left: 0.15%;
-    float: right;
-}
-
-.navItem3
-{
-    height: 10%;
+    height: 50px;
     width: 33%;
     background-color: black;
     color: white;
@@ -88,13 +56,6 @@ nav#bottomNav
 }
 
 .navItem:hover
-{
-    color: black;
-    background-color: white;
-    cursor: pointer;
-}
-
-.navItem3:hover
 {
     color: black;
     background-color: white;
@@ -170,39 +131,23 @@ nav#bottomNav
     color: black;
 }
 
-.button-create2
-{
-    background-color: navy;
-    text-decoration: none;
-    border: none;
-    color: #FFF;
-    font: 13px/1.4 Roboto,sans-serif;
-    padding: 8px 12px;
-}
-
-.button-create2:hover
-{
-    background-color: white;
-    color: black;
-}
-
 .pageBodyContainer
 {
     background-color: lightskyblue;
+    height: 500px;
 }
 
 .editProject
 {
     margin-top: 2%;
-    height:100px;
-    width: 375px;
+    height: 60px;
+    width: 230px;
 }
 
 .commentContainer
 {
     background-color: ghostwhite;
     margin-top: 20px;
-    margin-bottom: 20px;
     padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -217,20 +162,25 @@ nav#bottomNav
     padding-left: 30px;
 }
 
-.collaborators
+.projectCollaborators
 {
     padding-top: 10px;
 }
 
 .scrollDiv
 {
-    height: 85%;
-    width: 80%;
+    height: 500px;
     overflow-y: auto;
-    padding-left: 10%;
-    position: absolute;
-    padding-right: 10%;
-    background: lightskyblue;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.projImg
+{
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    margin-right: 30px;
 }
 
 .projFlexList
@@ -238,53 +188,21 @@ nav#bottomNav
     display: flex;
 }
 
-.entryImg
-{
-    height: 150px;
-    width: 150px;
-    min-height: 150px;
-    min-width: 150px;
-    margin-top: 20px;
-    margin-right: 30px;
-}
-
-.title
+.eventTitle
 {
     padding-top: 20px;
 }
 
-.description
+.eventDescription
 {
     padding-top: 10px;
 }
 
 .footer
 {
-    width: 100%;
-    bottom: 0;
     text-align: center;
-    background-color: white;
+    background-color: black;
     color: white;
-    position: fixed;
-    padding-top: 0.3vh;
-    padding-bottom: 0.4vh;
-}
-
-.contact
-{
-    background-color: ghostwhite;
-    padding-top: 1px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-@media screen and (max-width: 610px)
-{
-  .entryImg
-  {
-    display: none;
-  }
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
